@@ -1,0 +1,2 @@
+class LowScore < ApplicationRecord
+end

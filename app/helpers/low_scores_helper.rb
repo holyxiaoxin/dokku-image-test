@@ -1,0 +1,2 @@
+module LowScoresHelper
+end

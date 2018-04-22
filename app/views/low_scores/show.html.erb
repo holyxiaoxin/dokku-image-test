@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @low_score.game %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @low_score.score %>
+</p>
+
+<%= link_to 'Edit', edit_low_score_path(@low_score) %> |
+<%= link_to 'Back', low_scores_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: low_score, local: true) do |form| %>
+  <% if low_score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(low_score.errors.count, "error") %> prohibited this low_score from being saved:</h2>
+
+      <ul>
+      <% low_score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :game %>
+    <%= form.text_field :game, id: :low_score_game %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.number_field :score, id: :low_score_score %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
