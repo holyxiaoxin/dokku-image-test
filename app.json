@@ -1,0 +1,10 @@
+{
+  "name": "dokku-image-test",
+  "description": "Test API",
+  "repository": "https://github.com/holyxiaoxin/dokku-image-test",
+  "scripts": {
+    "dokku": {
+      "predeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
