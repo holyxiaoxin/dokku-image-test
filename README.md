@@ -1,24 +1,10 @@
-# README
+## Deploy to dokku using pre-built images
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```bash
+docker build -t dokku/<app-name> --build-arg DATABASE_URL=<input-remote-URL> .
+docker save dokku/<app-name> | ssh ubuntu@instance_ip "sudo docker load | sudo dokku tags:deploy <app-name> latest"
+```
 
-Things you may want to cover:
+Use initial `git push dokku master`, then convert to deploy using image.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ensure that SECRET_KEY_BASE, DATABASE_URL are set in `dokku config`
