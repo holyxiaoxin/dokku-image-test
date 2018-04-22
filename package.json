@@ -1,0 +1,5 @@
+{
+  "name": "dokku-image-test",
+  "private": true,
+  "dependencies": {}
+}
