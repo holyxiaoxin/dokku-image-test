@@ -17,4 +17,4 @@ COPY . /myapp
 RUN bundle exec rake DATABASE_URL=DATABASE_URL assets:precompile
 
 EXPOSE 3000
-CMD ["rails", "server"]
+CMD ["rails", "server", "-p", "3000"]
