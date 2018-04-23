@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @mid_score.game %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @mid_score.score %>
+</p>
+
+<%= link_to 'Edit', edit_mid_score_path(@mid_score) %> |
+<%= link_to 'Back', mid_scores_path %>

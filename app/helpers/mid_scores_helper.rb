@@ -1,0 +1,2 @@
+module MidScoresHelper
+end

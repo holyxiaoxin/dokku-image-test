@@ -1,0 +1,2 @@
+class MidScore < ApplicationRecord
+end

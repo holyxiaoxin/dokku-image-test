@@ -1,0 +1,27 @@
+<%= form_with(model: mid_score, local: true) do |form| %>
+  <% if mid_score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mid_score.errors.count, "error") %> prohibited this mid_score from being saved:</h2>
+
+      <ul>
+      <% mid_score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :game %>
+    <%= form.text_field :game, id: :mid_score_game %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.number_field :score, id: :mid_score_score %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
